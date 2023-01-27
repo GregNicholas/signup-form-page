@@ -1,15 +1,115 @@
-body {
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  html, body, ul, ol, li, figure, blockquote, dl, dd {
     margin: 0;
     padding: 0;
-    height: 100%;
-    color: brown
+  }
+
+body {
+    min-height: 100vh;
+    color: #635FC7
 }
 
 .content {
     display: flex;
+    position: absolute;
     height: 100%;
+    width: 100vw;
 }
 
 .hero {
+    position: relative;
+    flex: 1.1 1 0;
     background-image: url("/images/woods_background.jpg");
+    background-size: cover;
+    z-index: 1;
+}
+
+.hero-title {
+    position: absolute;
+    top: 20%;
+    height: 8rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 16px white;
+    background: rgba(255,255,255,0.6);
+}
+
+.hero-title img {
+    height: 40%;
+}
+
+.credit {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.credit, .credit a {
+    color: white;
+    font-size: .75rem;
+}
+
+.form-display {
+    position: relative;
+    flex: 2 1 0;
+    background-color: #F4F7FD;
+}
+
+form {
+    box-shadow: 0px 2px 3px lightgrey;
+    padding: 0.8rem 1.5rem;
+    position: relative;
+    background-color: white;
+}
+
+.inputs-all {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    width: 40rem;
+}
+
+input, label {
+    display: block;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 15rem;
+}
+
+.input-block {
+    display: inline-block;
+}
+
+.info {
+    padding: 1rem 1.5rem;
+}
+
+.info p {
+    margin: 0;
+}
+
+.info p:last-of-type {
+    color: magenta;
 }
