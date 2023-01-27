@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up Form</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section class="content">
-        <section class="hero">
-            <div class="hero-title">
-                <img src="/images/kb-logo.svg">
-                <h1 class="hero-title-name">K Guru</h1>
+      <section class="hero">
+        <div class="hero-title">
+          <img src="/images/kb-logo.svg" />
+          <h1 class="hero-title-name">K Guru</h1>
+        </div>
+        <p class="credit">
+          Photo by
+          <a href="https://unsplash.com/@fabulu75">Fabrice Villard</a> on
+          <a href="https://unsplash.com/">Unsplash</a>
+        </p>
+      </section>
+      <section class="form-display">
+        <div class="info">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+          </p>
+          <p>Sign up <span class="word">now</span>&nbsp; to get started.</p>
+          <p>You <span class="word">know</span>&nbsp; you want to.</p>
+        </div>
+        <form action="#" id="form-register">
+          <h2 class="form-title">Let's do this!</h2>
+          <div class="inputs-all">
+            <div class="input-block">
+              <label for="first-name">first name</label>
+              <input type="text" name="firstName" id="first-name" required />
             </div>
-            <p class="credit">Photo by <a href="https://unsplash.com/@fabulu75">Fabrice Villard</a> on <a href="https://unsplash.com/">Unsplash</a></p>
-        </section>
-        <section class="form-display">
-            <div class="info">
-                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
-                <p>Sign up now to get started.</p>    
-                <p></p>You know you want to.</p>
+            <div class="input-block">
+              <label for="last-name">last name</label>
+              <input type="text" name="lastName" id="last-name" required />
             </div>
-            <form action="#">
-                <h2 class="form-title">Let's do this!</h2>
-                <div class="inputs-all">
-                    <div class="input-block">
-                        <label for="first-name">first name</label>
-                        <input type="text" name="firstName" id="first-name">
-                    </div>
-                    <div class="input-block">
-                        <label for="last-name">last name</label>
-                        <input type="text" name="lastName" id="last-name">
-                    </div>
-                    <div class="input-block">
-                        <label for="email">email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="input-block">
-                        <label for="phone">phone number</label>
-                        <input type="text" name="phone" id="phone">
-                    </div>
-                    <div class="input-block">
-                        <label for="password">password</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <div class="input-block">
-                        <label for="password-confirm">confirm password</label>
-                        <input type="password" name="passwordConfirm" id="password-confirm">
-                    </div>
-                </div>
-                <button type="submit">Create Account</button>
-            </form>
-            <p class="login-instruction">Already have an account? <a href="#">Login</a></p>
-        </section>
+            <div class="input-block">
+              <label for="email">email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="input-block">
+              <label for="phone">phone number</label>
+              <input type="text" name="phone" id="phone" required />
+            </div>
+            <div class="input-block">
+              <label for="password">password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                minlength="8"
+                required
+              />
+            </div>
+            <div class="input-block">
+              <label for="password-confirm">confirm password</label>
+              <input
+                type="password"
+                name="passwordConfirm"
+                id="password-confirm"
+                minlength="8"
+                required
+              />
+            </div>
+          </div>
+        </form>
+        <button class="btn-submit" type="submit" form="form-register">
+          Create Account
+        </button>
+        <p class="login-instruction">
+          Already have an account? <a href="#">Login</a>
+        </p>
+      </section>
     </section>
-</body>
+  </body>
 </html>

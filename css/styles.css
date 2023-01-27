@@ -1,3 +1,19 @@
+:root {
+    --main-purple: #635FC7;
+    --main-purple-hover: #A8A4FF;
+    --black: #000112;
+    --v-dark-gray: #20212C;
+    --d-gray: #2B2C37;
+    --d-lines: #3E3F4E;
+    --m-gray: #828FA3;
+    --l-lines: #E4EBFA;
+    --l-gray: #F4F7FD;
+    --white: #FFFFFF;
+    --red: #EA5555;
+    --red-hover: #FF9898;
+    --filter: rgba(0, 0, 0, 0.5);
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -14,7 +30,8 @@
 
 body {
     min-height: 100vh;
-    color: #635FC7
+    color: var(--main-purple);
+    font-weight: bold;
 }
 
 .content {
@@ -65,22 +82,27 @@ body {
 .form-display {
     position: relative;
     flex: 2 1 0;
-    background-color: #F4F7FD;
+    background-color: var(--l-gray);
 }
 
 form {
     box-shadow: 0px 2px 3px lightgrey;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2.5rem 1.8rem 2.5rem;
     position: relative;
     background-color: white;
+}
+
+.form-title {
+    margin-bottom: 1.4rem;
 }
 
 .inputs-all {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 4rem;
+    column-gap: 3rem;
     row-gap: 1rem;
-    width: 40rem;
+    min-width: 34rem;
+    max-width: 40rem;
 }
 
 input, label {
@@ -92,24 +114,68 @@ label {
     font-size: .75rem;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
 input {
     width: 15rem;
+    border: 1px solid var(--l-lines);
+    height: 1.8rem;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: 1px solid var(--main-purple);
+    box-shadow: 3px 3px 5px;
+}
+
+input:focus:invalid {
+    outline: 1px solid red;
 }
 
 .input-block {
     display: inline-block;
 }
 
+.btn-submit {
+    background-color: var(--main-purple);
+    margin: 1.5rem 2.5rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.7rem 2.4rem;
+    border: none;
+    box-shadow: 1px 3px 5px var(--m-gray);
+}
+.btn-submit:hover {
+    background: var(--main-purple-hover);
+}
+.btn-submit:active {
+    box-shadow: none;
+}
+
+.login-instruction {
+    color: var(--main-purple);
+    margin-top: 0;
+    padding-left: 2.5rem;
+    font-size: .8rem;
+}
+
 .info {
-    padding: 1rem 1.5rem;
+    padding: 7rem 2.5rem 3rem 2.5rem;
+    font-weight: bold;
 }
 
 .info p {
     margin: 0;
+    line-height: 1.4;
 }
 
 .info p:last-of-type {
-    color: magenta;
+    margin-top: 1.2rem;
+}
+
+.word {
+    font-style: italic;
 }
