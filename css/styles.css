@@ -38,7 +38,7 @@ body {
     display: flex;
     position: absolute;
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
 .hero {
@@ -101,7 +101,7 @@ form {
     flex-wrap: wrap;
     column-gap: 3rem;
     row-gap: 1rem;
-    min-width: 34rem;
+    min-width: 33rem;
     max-width: 40rem;
 }
 
@@ -179,3 +179,51 @@ input:focus:invalid {
 .word {
     font-style: italic;
 }
+
+@media screen and (max-width: 860px) {
+    body {
+        max-width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .hero {
+        flex: none;
+        height:20rem;
+    }
+
+    .credit {
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .info {
+        padding: 3rem 2.5rem 1rem 2.5rem;
+        font-weight: bold;
+    }
+
+    .inputs-all {
+        margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .inputs-all {
+        min-width: 15rem;
+        justify-content: center;
+    }
+
+    .btn-submit {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+    }
+
+    .login-instruction {
+        text-align: center;
+        padding: 0;
+    }
+  }
