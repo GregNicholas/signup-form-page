@@ -48,7 +48,7 @@ body {
 .hero {
     position: relative;
     flex: 1.1 1 0;
-    background-image: url("/images/woods_background.jpg");
+    background-image: url("../images/woods_background.jpg");
     background-size: cover;
     z-index: 1;
 }
