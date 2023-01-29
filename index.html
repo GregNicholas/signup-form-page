@@ -67,6 +67,9 @@
                 name="password"
                 id="password"
                 minlength="8"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                onkeyup="validatePassword()"
                 required
               />
             </div>
@@ -77,12 +80,28 @@
                 name="passwordConfirm"
                 id="password-confirm"
                 minlength="8"
+                onkeyup="matchPasswords()"
                 required
               />
             </div>
           </div>
         </form>
-        <button class="btn-submit" type="submit" form="form-register">
+        <div id="message">
+          <h3>Password must contain the following:</h3>
+          <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+          <p id="capital" class="invalid">
+            A <b>capital (uppercase)</b> letter
+          </p>
+          <p id="number" class="invalid">A <b>number</b></p>
+          <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          <p id="match" class="invalid">Passwords must match</p>
+        </div>
+        <button
+          onclick="matchPasswords()"
+          class="btn-submit"
+          type="submit"
+          form="form-register"
+        >
           Create Account
         </button>
         <p class="login-instruction">
@@ -90,5 +109,6 @@
         </p>
       </section>
     </section>
+    <script src="./js/index.js"></script>
   </body>
 </html>

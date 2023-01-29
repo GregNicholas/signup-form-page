@@ -37,7 +37,6 @@ body {
 .content {
     display: flex;
     position: absolute;
-    height: 100%;
     width: 100%;
 }
 
@@ -226,4 +225,44 @@ input:focus:invalid {
         text-align: center;
         padding: 0;
     }
+  }
+
+  /* Style the container for inputs */
+.container {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* The message box is shown when the user clicks on the password field */
+  #message {
+    display: none;
+    background: var(--l-gray);
+    padding: 0.5rem 2.5rem;
+  }
+  
+  #message p {
+    font-size: .9rem;
+    margin: 0.5rem;
+  }
+  
+  /* Add a custom color and a checkmark when the requirements are right */
+  .valid {
+    color: var(--main-purple);
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -0.5rem;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -0.5rem;
+    content: "❌";
   }
