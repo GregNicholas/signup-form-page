@@ -32,12 +32,17 @@ body {
     min-height: 100vh;
     color: var(--main-purple);
     font-weight: bold;
+    background-color: var(--main-purple-hover);
 }
 
 .content {
     display: flex;
-    position: absolute;
-    width: 100%;
+    /* position: absolute; */
+    /* width: 100%; */
+    /* min-height: 100%; */
+    max-width: 900px;
+    max-height: 600px;
+    margin: auto;
 }
 
 .hero {
@@ -162,7 +167,7 @@ input:focus:invalid {
 }
 
 .info {
-    padding: 7rem 2.5rem 3rem 2.5rem;
+    padding: 3rem 2.5rem 2rem 2.5rem;
     font-weight: bold;
 }
 
@@ -179,58 +184,10 @@ input:focus:invalid {
     font-style: italic;
 }
 
-@media screen and (max-width: 860px) {
-    body {
-        max-width: 100%;
-    }
-
-    .content {
-        flex-direction: column;
-    }
-
-    .hero {
-        flex: none;
-        height:20rem;
-    }
-
-    .credit {
-        text-align: right;
-        padding-right: 1rem;
-    }
-
-    .info {
-        padding: 3rem 2.5rem 1rem 2.5rem;
-        font-weight: bold;
-    }
-
-    .inputs-all {
-        margin: 0 auto;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .inputs-all {
-        min-width: 15rem;
-        justify-content: center;
-    }
-
-    .btn-submit {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 0;
-    }
-
-    .login-instruction {
-        text-align: center;
-        padding: 0;
-    }
-  }
-
-  /* Style the container for inputs */
-.container {
+ /* Style the container for inputs */
+ .container {
     background-color: #f1f1f1;
-    padding: 20px;
+    padding: 1.25rem;
   }
   
   /* The message box is shown when the user clicks on the password field */
@@ -265,4 +222,62 @@ input:focus:invalid {
     position: relative;
     left: -0.5rem;
     content: "❌";
+  }
+
+  @media screen and (max-width: 860px) {
+    body {
+        max-width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .hero {
+        flex: none;
+        height: 20rem;
+    }
+
+    .credit {
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .info {
+        padding: 2rem 2rem 1rem 2rem;
+        font-weight: bold;
+    }
+
+    .inputs-all {
+        margin: 0 auto;
+    }
+
+    .btn-submit, .login-instruction {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    form {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .inputs-all {
+        min-width: 15rem;
+        justify-content: center;
+    }
+
+    .btn-submit {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+    }
+
+    .login-instruction {
+        text-align: center;
+        padding: 0;
+    }
   }
