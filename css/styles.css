@@ -195,6 +195,11 @@ input:focus:invalid {
     display: none;
     background: var(--l-gray);
     padding: 0.5rem 2.5rem;
+    position: absolute;
+    transform: translate(35px, -295px);
+    border-radius: 10px;
+    box-shadow: -2px -2px 20px -5px;
+    max-width: 80vw;
   }
   
   #message p {
@@ -279,5 +284,9 @@ input:focus:invalid {
     .login-instruction {
         text-align: center;
         padding: 0;
+    }
+
+    #message {
+        transform: translate(35px, -365px);
     }
   }
